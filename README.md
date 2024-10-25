@@ -20,6 +20,6 @@ x = variable, y = value
 `output x` - Outputs a variable to the console.
 
 
-### acknowledgements
+### Acknowledgements
 
 This code was fully written my me, Joseph, in my spare time, so errors and features may take time to be implemented. Thanks for understanding!
