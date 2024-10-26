@@ -1,14 +1,26 @@
 # Nest
 Nest is a custom programming language / REPL written in python but will be eventually be available in EXE form.
-Nest is made with simplicity in mind and readability paramount so simple functions are used, for instance in the REPL, to easilly output a variable set, you just enter `getvar x` where x is the variable you need to know's value.
+Nest is made with readability in mind so simple functions are used, for instance in the REPL, to easilly output a variable set, you just enter `getvar x` where x is the variable you need to know's value.
 Nest has been designed to be similar to python without acctually being pyton itself (even though it is written in it!). Unless you are a variable, the language is NOT case-sensitive for ease of use.
 
+### Maths
+Nest has some simple built-in math functions:
+
+`add`
+
+`sub`
+
+`mult`
+
+`div`
+
+You can use these with plain numbers, or with the accumulators . These are set with `setvar acu1 x` or `setvar acu2 x` where x are pre-defined and set variables.
 
 ## Currently Implemented:
 
 placeholders:
 
-x = variable, y = value
+x = variable, y = value, acu1 = accumulator 1, acu2 = accumulator 2.
 
 ---
 
