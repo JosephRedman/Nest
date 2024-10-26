@@ -12,7 +12,7 @@ x = variable, y = value
 
 ---
 
-`help` - shows the user a list of "commands" they can type in the REPL, will be replaced to a link here.
+`help` - shows the user a list of "commands" they can type in the REPL, will be replaced to a link here. **Does not work in programs**.
 
 `getvar x` - "gets" a variable and outputs it's value to the console.
 
@@ -20,7 +20,15 @@ x = variable, y = value
 
 `output x` - Outputs a variable to the console.
 
-`exit` - closes the REPL.
+`exit` - closes the REPL or exits the program.
+
+`add y y x` - adds 2 numbers and sets a variable to the answer. The first value given is the first in the operation, so `add 5 10 x` does 5+10 and sets it to x
+
+`sub y y x` - subtracts 2 numbers and sets a variable to the answer. The first value given is the first in the operation, so `sub 5 10 x` does 5-10 and sets it to x
+
+`mult y y x` - multiplies 2 numbers and sets a variable to the answer. The first value given is the first in the operation, so `mult 5 10 x` does 5*10 and sets it to x
+
+`div y y x` - divides 2 numbers and sets a variable to the answer. The first value given is the first in the operation, so `div 5 10 x` does 5/10 and sets it to x
 
 ---
 
