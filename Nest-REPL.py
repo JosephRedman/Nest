@@ -2,9 +2,6 @@
 var = [] 
 vari = []
 
-# Variables
-parts = ""
-
 
 cmdStart = "]"   # Edit this to change the line header
 cmdStart = cmdStart + " "
@@ -32,37 +29,64 @@ def setVariable(variable, value):
             var[i] = value
             break
     else:
+        # If the loop completes without finding 'variable', add it to 'vari' and 'var'
         vari.append(variable)
         var.append(value)
 
 
 # Functions used for the dictionary
-def help_cmd(*args):
+def help(*args):
     help()
 
-def get_variable_cmd(instruction):
+def get_variable(instruction):
     split = instruction.split()
-    print(cmdStart + getVariable(str(split[1])))
+    print(cmdStart + str(getVariable(str(split[1]))))
 
-def set_variable_cmd(instruction):
+def set_variable(instruction):
     split = instruction.split()
-    setVariable(str(split[1]), str(split[2]))
+    variable = split[1]
+    value = " ".join(split[2:])  # Join everything after split[1] to form the full value
+    setVariable(variable, value)
 
-def output_variable_cmd(instruction):
+def output(instruction):
     split = instruction.split()
     print(cmdStart + str(getVariable(split[1])))
 
 def close(*args):
     quit()
 
+def add(instruction):
+    split = instruction.split()
+    ans = float(split[1]) + float(split[2])
+    setVariable(split[3], ans)
+
+def subtract(instruction):
+    split = instruction.split()
+    ans = float(split[1]) - float(split[2])
+    setVariable(split[3], ans)
+
+def multiply(instruction):
+    split = instruction.split()
+    ans = float(split[1]) * float(split[2])
+    setVariable(split[3], ans)
+
+def divide(instruction):
+    split = instruction.split()
+    ans = float(split[1]) / float(split[2])
+    setVariable(split[3], ans)
+
 
 # Dictionary for command functions
 commands = {
-    "help": help_cmd,
-    "getvar": get_variable_cmd,
-    "setvar": set_variable_cmd,
-    "output": output_variable_cmd,
+    "help": help,
+    "getvar": get_variable,
+    "setvar": set_variable,
+    "output": output,
     "exit": close,
+    "add": add,
+    "sub": subtract,
+    "mult": multiply,
+    "div": divide,
 }
 
 # Main function to process input
