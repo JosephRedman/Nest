@@ -7,7 +7,8 @@ var = []
 vari = []
 
 # Variables
-parts = ""
+acu1 = 0.0   # Accumilator 1 
+acu2 = 0.0   # Accumilator 2. These are used instead of directly adding to variables and is good enough for now.
 
 
 def getVariable(variable):
@@ -17,14 +18,22 @@ def getVariable(variable):
     return var[i]
 
 def setVariable(variable, value):
-    for i in range(len(vari)):
-        if vari[i] == variable:
-            var[i] = value
-            break
+    global acu1, acu2  # Allow modification of global variables acu1 and acu2
+    
+    if variable == "acu1":
+        acu1 = getVariable(value)
+    elif variable == "acu2":
+        acu2 = getVariable(value)
     else:
-        # If the loop completes without finding 'variable', add it to 'vari' and 'var'
-        vari.append(variable)
-        var.append(value)
+        # Search for the variable in 'vari' and update if it exists
+        for i in range(len(vari)):
+            if vari[i] == variable:
+                var[i] = value
+                break
+        else:
+            # If the variable doesn't exist, add it to 'vari' and 'var'
+            vari.append(variable)
+            var.append(value)
 
 def readLine(file):
     with open(file, 'r') as f:
@@ -50,24 +59,41 @@ def output_variable(instruction):
 def close(*args):
     quit()
 
+def get_value(val):
+    # Helper function to get the float value of a variable or a number.
+    if val == 'acu1':
+        return float(acu1)
+    elif val == 'acu2':
+        return float(acu2)
+    else:
+        return float(val)
+
 def add(instruction):
     split = instruction.split()
-    ans = float(split[1]) + float(split[2])
+    val1 = get_value(split[1])
+    val2 = get_value(split[2])
+    ans = val1 + val2
     setVariable(split[3], ans)
 
 def subtract(instruction):
     split = instruction.split()
-    ans = float(split[1]) - float(split[2])
+    val1 = get_value(split[1])
+    val2 = get_value(split[2])
+    ans = val1 - val2
     setVariable(split[3], ans)
 
 def multiply(instruction):
     split = instruction.split()
-    ans = float(split[1]) * float(split[2])
+    val1 = get_value(split[1])
+    val2 = get_value(split[2])
+    ans = val1 * val2
     setVariable(split[3], ans)
 
 def divide(instruction):
     split = instruction.split()
-    ans = float(split[1]) / float(split[2])
+    val1 = get_value(split[1])
+    val2 = get_value(split[2])
+    ans = val1 / val2
     setVariable(split[3], ans)
 
 functions = {
