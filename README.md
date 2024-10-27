@@ -50,7 +50,7 @@ x = variable, y = value, acu1 = accumulator 1, acu2 = accumulator 2.
 
 ---
 
-`help` - shows the user a list of "commands" they can type in the REPL, will be replaced to a link here. **Does not work in programs**.
+`getHelp` - shows the user a list of "commands" they can type in the REPL, will be replaced to a link here. **Does not work in programs**.
 
 `getvar x` - "gets" a variable and outputs it's value to the console.
 
