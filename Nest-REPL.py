@@ -102,7 +102,7 @@ def divide(instruction):
 
 # Dictionary for command functions
 commands = {
-    "help": help,
+    "getHelp": help,
     "getvar": get_variable,
     "setvar": set_variable,
     "output": output,
@@ -120,7 +120,10 @@ def mainNoFile():
         command_key = instruction.split()[0].lower()  # Get the command part of the input
         # Execute command if it exists in the dictionary
         if command_key in commands:
-            commands[command_key](instruction)  # Pass the instruction to the function
+            if instruction.split()[1:]:
+                commands[command_key](instruction)
+            else:
+                commands[command_key]()
         else:
             print(cmdStart + "SYNTAX ERROR: '" + instruction + "' IS NOT A VALID COMMAND OR FUNCTION. ENTER HELP FOR HELP")
     else:
