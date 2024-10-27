@@ -3,6 +3,10 @@ Nest is a custom programming language / REPL written in python but will be event
 Nest is made with readability in mind so simple functions are used, for instance in the REPL, to easilly output a variable set, you just enter `getvar x` where x is the variable you need to know's value.
 Nest has been designed to be similar to python without acctually being pyton itself (even though it is written in it!). Unless you are a variable, the language is NOT case-sensitive for ease of use.
 
+---
+
+## Help
+
 ### Maths
 Nest has some simple built-in math functions:
 
@@ -13,8 +17,30 @@ Nest has some simple built-in math functions:
 `mult`
 
 `div`
+x
+You can use these with plain numbers, or with the accumulators . These are set with `setvar acu1 x` or `setvar acu2 x` where `x` is a pre-defined variable. When using the accumulators, the language assumes that the values given are numbers.
 
-You can use these with plain numbers, or with the accumulators . These are set with `setvar acu1 x` or `setvar acu2 x` where x are pre-defined and set variables.
+---
+
+### Variables
+Nest's variables are simple. To create a variable do `setvar x abc` Creates the variable `x` with the string abc inside. From then on `setvar x xyz` would just set `x` to the value given.
+
+---
+
+### Outputs
+To output to the console, use `output x` where `x` is a variable containing a string or a number etc
+
+---
+## To do:
+
+- [ ] Loops
+- [x] Outputs
+- [x] Maths
+- [x] Variables
+- [ ] Arrays
+- [ ] Functions
+
+---
 
 ## Currently Implemented:
 
