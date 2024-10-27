@@ -125,7 +125,7 @@ def mainNoFile():
             else:
                 commands[command_key]()
         else:
-            print(cmdStart + "SYNTAX ERROR: '" + instruction + "' IS NOT A VALID COMMAND OR FUNCTION. ENTER HELP FOR HELP")
+            print(cmdStart + "SYNTAX ERROR: '" + instruction + "' IS NOT A VALID COMMAND OR FUNCTION. ENTER GETHELP FOR HELP")
     else:
         pass
 
