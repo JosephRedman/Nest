@@ -14,7 +14,7 @@ cmdStart = cmdStart + " "
 
 
 # Functions used by the program
-def help():
+def helpUrl():
     print(cmdStart + "FOR HELP, GO TO: https://github.com/JosephRedman/Nest/blob/main/README.md#currently-implemented")
 
 def getVariable(variable):
@@ -44,7 +44,7 @@ def setVariable(variable, value):
 
 # Functions used for the dictionary
 def help(*args):
-    help()
+    helpUrl()
 
 def get_variable(instruction):
     split = instruction.split()
