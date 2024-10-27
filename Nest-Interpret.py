@@ -10,6 +10,7 @@ vari = []
 acu1 = 0.0   # Accumilator 1 
 acu2 = 0.0   # Accumilator 2. These are used instead of directly adding to variables and is good enough for now.
 
+lineNum = 1
 
 def getVariable(variable):
     i = 0
@@ -36,10 +37,11 @@ def setVariable(variable, value):
             var.append(value)
 
 def readLine(file):
+    global lineNum
     with open(file, 'r') as f:
         for line in f:
             yield line.strip()  # Remove leading and trailing whitespace, including newline
-
+            lineNum = lineNum + 1
 
 
 def get_variable(instruction):
@@ -117,6 +119,7 @@ for line in readLine(file_path):
         if command_key in functions:
             functions[command_key](instruction)  # Pass the instruction to the function
         else:
-            print("SYNTAX ERROR: '" + instruction + "' IS NOT A VALID COMMAND OR FUNCTION. ENTER HELP FOR HELP")
+            print("SYNTAX ERROR ON LINE "+ str(lineNum) +": '" + instruction + "' IS NOT A VALID COMMAND OR FUNCTION.")
+            print("FOR HELP, GO TO: https://github.com/JosephRedman/Nest/blob/main/README.md#currently-implemented")
     else:
         pass
