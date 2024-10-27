@@ -23,7 +23,7 @@ You can use these with plain numbers, or with the accumulators . These are set w
 ---
 
 ### Variables
-Nest's variables are simple. To create a variable do `setvar x abc` Creates the variable `x` with the string abc inside. From then on `setvar x xyz` would just set `x` to the value given.
+Nest's variables are simple. To create a variable do `setvar x abc` Creates the variable `x` with the string abc inside. From then on `setvar x xyz` would just set `x` to the value given. In order to "get" a variable (usefull in REPL), just use `getvar x` where x is the variable. This throws an error if the variable does not exist.
 
 ---
 
