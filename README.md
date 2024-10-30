@@ -17,7 +17,7 @@ Nest has some simple built-in math functions:
 `mult`
 
 `div`
-x
+
 You can use these with plain numbers, or with the accumulators . These are set with `setvar acu1 x` or `setvar acu2 x` where `x` is a pre-defined variable. When using the accumulators, the language assumes that the values given are numbers.
 
 ---
@@ -39,7 +39,7 @@ To output to the console, use `output x` where `x` is a variable containing a st
 - [x] Variables
 - [ ] Arrays
 - [ ] Functions
-- [ ] Comments
+- [x] Comments
 
 ---
 
