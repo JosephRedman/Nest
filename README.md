@@ -31,6 +31,11 @@ Nest's variables are simple. To create a variable do `setvar x abc` Creates the 
 To output to the console, use `output x` where `x` is a variable containing a string or a number etc
 
 ---
+
+### Comments
+In order to comment your code, you can use `~Your Comment Here~`. **WARNING:** your code will not run or give an error if your comment is not closed.
+
+---
 ## To do:
 
 - [ ] Loops
@@ -61,13 +66,15 @@ x = variable, y = value, acu1 = accumulator 1, acu2 = accumulator 2.
 
 `exit` - closes the REPL or exits the program.
 
-`add y y x` - adds 2 numbers and sets a variable to the answer. The first value given is the first in the operation, so `add 5 10 x` does 5+10 and sets it to x
+`add y y x` - adds 2 numbers and sets a variable to the answer. The first value given is the first in the operation, so `add 5 10 x` does 5+10 and sets it to x.
 
-`sub y y x` - subtracts 2 numbers and sets a variable to the answer. The first value given is the first in the operation, so `sub 5 10 x` does 5-10 and sets it to x
+`sub y y x` - subtracts 2 numbers and sets a variable to the answer. The first value given is the first in the operation, so `sub 5 10 x` does 5-10 and sets it to x.
 
-`mult y y x` - multiplies 2 numbers and sets a variable to the answer. The first value given is the first in the operation, so `mult 5 10 x` does 5*10 and sets it to x
+`mult y y x` - multiplies 2 numbers and sets a variable to the answer. The first value given is the first in the operation, so `mult 5 10 x` does 5*10 and sets it to x.
 
-`div y y x` - divides 2 numbers and sets a variable to the answer. The first value given is the first in the operation, so `div 5 10 x` does 5/10 and sets it to x
+`div y y x` - divides 2 numbers and sets a variable to the answer. The first value given is the first in the operation, so `div 5 10 x` does 5/10 and sets it to x.
+
+`~` - Opens and closes a comment. Is used like `~Your Comment Here~`.
 
 ---
 
