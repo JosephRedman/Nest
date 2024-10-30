@@ -1,0 +1,7 @@
+~This is some example code written in Nest. This is a comment.~ 
+~Comments must be inside these 2 symbols ("~")~~
+
+setvar x Hello, World!
+
+output x
+
