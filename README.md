@@ -39,6 +39,7 @@ To output to the console, use `output x` where `x` is a variable containing a st
 - [x] Variables
 - [ ] Arrays
 - [ ] Functions
+- [ ] Comments
 
 ---
 
