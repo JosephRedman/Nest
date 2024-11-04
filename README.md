@@ -45,7 +45,7 @@ In order to comment your code, you can use `~Your Comment Here~`. **WARNING:** y
 - [ ] Arrays
 - [ ] Functions
 - [x] Comments
-
+- [ ] re-write in a better (compiled) language
 ---
 
 ## Currently Implemented:
@@ -56,7 +56,7 @@ x = variable, y = value, acu1 = accumulator 1, acu2 = accumulator 2.
 
 ---
 
-`getHelp` - shows the user a list of "commands" they can type in the REPL, will be replaced to a link here. **Does not work in programs**.
+`getHelp` - shows the user a list of "commands" they can type in the REPL, will be replaced to a link here. **Only works in REPL.**
 
 `getvar x` - "gets" a variable and outputs it's value to the console.
 
@@ -75,6 +75,8 @@ x = variable, y = value, acu1 = accumulator 1, acu2 = accumulator 2.
 `div y y x` - divides 2 numbers and sets a variable to the answer. The first value given is the first in the operation, so `div 5 10 x` does 5/10 and sets it to x.
 
 `~` - Opens and closes a comment. Is used like `~Your Comment Here~`.
+
+`run file.nst` - Runs a Nest file. Usage is either `run file.nest` or `run path\to\your\file.nst`. **Only works in REPL.**
 
 ---
 
